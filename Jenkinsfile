@@ -11,6 +11,7 @@ pipeline {
     NEXUS_URL = "10.107.8.63:8081"
     NEXUS_REPOSITORY = "maven-nexus-repo"
     NEXUS_CREDENTIAL_ID = "nexus-user-credentials"
+    DOCKERHUB_CREDENTIALS=credentials('dockerhub')
   }
 
   stages {
@@ -86,6 +87,14 @@ pipeline {
             }
         }
     }
+
+    stage('Build') {
+        steps {
+            script {
+                sh 'docker build -t thetips4you/nodeapp_test:latest .'
+            }
+        }
+	}
 
 
   }
