@@ -17,7 +17,7 @@ pipeline {
   stages {
     stage('Clone the Git') {
         steps {
-            git 'https://github.com/Oussama-Goumghar/maven-basic-project.git'
+            git 'https://github.com/Oussama-Goumghar/java_web_app.git'
         }
         
     }    
