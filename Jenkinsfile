@@ -18,7 +18,7 @@ pipeline {
                     -D sonar.password=sonar \
                     -D sonar.projectKey=project \
                     -D sonar.exclusions=vendor/**,resources/**,**/*.java \
-                    -D sonar.host.url=http://10.109.227.155/"
+                    -D sonar.host.url=http://sonar.sqli/"
                 }
             }
         } 
